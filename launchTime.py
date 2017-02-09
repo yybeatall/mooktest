@@ -65,13 +65,13 @@ class Controller(object):
 
     # 数据的存储
     def SaveDataToCSV(self):
-        csvfile = open('startTime2.csv', 'w')
+        csvfile = open('startTime2.csv', 'w',newline='')
         writer = csv.writer(csvfile)
         writer.writerows(self.alldata)
         csvfile.close()
 
 
 if __name__ == "__main__":
-    controller = Controller(10)
+    controller = Controller(2)
     controller.run()
     controller.SaveDataToCSV()
